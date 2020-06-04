@@ -3,4 +3,12 @@
     <color name="colorPrimary">@android:color/black</color>
     <color name="colorPrimaryDark">@android:color/black</color>
     <color name="colorAccent">@android:color/white</color>
+    <color name="color_stop_background">#4E8882</color>
+    <color name="finish_stop_background">#3D8E86</color>
+    <color name="color_rec_item_background">#E6E0E2</color>
+    <color name="color_white">@android:color/white</color>
+    <color name="color_gray">@android:color/darker_gray</color>
+    <color name="color_blue">#2196F3</color>
+    <color name="color_green">#09870E</color>
+    <color name="color_red">#CD0C0C</color>
 </resources>
