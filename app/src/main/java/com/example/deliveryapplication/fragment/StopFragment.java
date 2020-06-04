@@ -69,7 +69,7 @@ public class StopFragment extends Fragment implements OnNavigateToMapListener {
     @Override
     public void setOnNavigateToMap(Delivery delivery) {
         if (!statusCheck()) {
-            navFromCurrentLocToDeliveryLoc(delivery.getAddress().getLatitude(), delivery.getAddress().getLongitude());
+            navFromCurrentLocToDeliveryLoc(delivery);
         }
     }
 
@@ -83,8 +83,8 @@ public class StopFragment extends Fragment implements OnNavigateToMapListener {
         return false;
     }
 
-    public void navFromCurrentLocToDeliveryLoc(double lat, double lng) {
-        Uri navigation = Uri.parse("google.navigation:q=" + lat + "," + lng + "");
+    public void navFromCurrentLocToDeliveryLoc(Delivery delivery) {
+        Uri navigation = Uri.parse("google.navigation:q=" + delivery.getAddress().getLatitude() + "," + delivery.getAddress().getLongitude() + "");
         Intent navigationIntent = new Intent(Intent.ACTION_VIEW, navigation);
         navigationIntent.setPackage("com.google.android.apps.maps");
         startActivity(navigationIntent);
