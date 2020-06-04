@@ -14,4 +14,5 @@ public class Address {
     private String address;
     private double longitude;
     private double latitude;
+    private String placeCategory;
 }
